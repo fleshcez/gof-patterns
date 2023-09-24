@@ -1,6 +1,5 @@
 import { describe, expect, test } from "@jest/globals";
 import { RaceCarClient } from "./RaceCarClient";
-import { RaceCar } from "./RaceCar";
 import { FlyweightMidgetCar } from "./FlyweightMidgetCar";
 import { FlyweightSprintCar } from "./FlyweightSprintCar";
 
