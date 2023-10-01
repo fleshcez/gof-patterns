@@ -1,7 +1,6 @@
 import { beforeEach, describe, expect, test } from "@jest/globals";
 import { PatternAggregateImpl } from "./PatternAggregateImpl";
 import { DesignPattern } from "./DesignPattern";
-import { PatternIteratorImpl } from "./PatternIteratorImpl";
 import { IPatternAggregate } from "./IPatternAggregate";
 
 describe("Iterator test", () => {
