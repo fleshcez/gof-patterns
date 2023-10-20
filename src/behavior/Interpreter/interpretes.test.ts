@@ -14,4 +14,9 @@ describe("interpreter test", () => {
         expect(expressionParser.parse(expr)).toEqual(12);
         expect(expressionParser.parse(expr2)).toEqual(20);
     });
+
+    test("it should divide", () => {
+        const expr = "2 6 /";
+        expect(expressionParser.parse(expr)).toEqual(3);
+    });
 });

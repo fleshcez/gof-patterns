@@ -1,11 +1,14 @@
 import { AdditionExpression } from "./AdditionExpression";
+import { DivisionExpression } from "./DivisionExpression";
 import { IExpression } from "./IExpression";
 import { MultiplicationExpression } from "./MultiplicationExpression";
 import { SubtractionExpression } from "./SubtractionExpression";
 
 export class ParserUtil {
     public static isOperator(symbol: string): boolean {
-        return symbol === "-" || symbol === "+" || symbol === "*";
+        return (
+            symbol === "-" || symbol === "+" || symbol === "*" || symbol === "/"
+        );
     }
 
     public static getExpressionObject(
@@ -26,6 +29,11 @@ export class ParserUtil {
                 );
             case "*":
                 return new MultiplicationExpression(
+                    firstExpression,
+                    secondExpression
+                );
+            case "/":
+                return new DivisionExpression(
                     firstExpression,
                     secondExpression
                 );
